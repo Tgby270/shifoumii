@@ -6,7 +6,7 @@ let playedP = document.getElementById("playerPlayed");
 let playedC = document.getElementById("computerPlayed");
 let res = document.getElementById("res");
 
-let victortry = document.getElementById("victory");
+let victory = document.getElementById("victory");
 let defeat = document.getElementById("defeat");
 let tie = document.getElementById("tie");
 
@@ -29,15 +29,27 @@ function play(which) {
         if(computer == "rock") {
             res.textContent = "Égalité !";
             tieCount++;
-            tie.textContent = tieCount + " égalités";
+            if(tieCount == 1) {
+                tie.textContent = tieCount + " égalité";
+            } else {
+                tie.textContent = tieCount + " égalités";
+            }
         } else if(computer == "paper") {
             res.textContent = "Vous avez perdu !";
             def++;
-            defeat.textContent = def + " défaites";
+            if(def == 1) {
+                defeat.textContent = def + " défaite";
+            } else {
+                defeat.textContent = def + " défaites";
+            }
         } else if(computer == "scissors") {
             res.textContent = "Vous avez gagné !";
             vic++;
-            victortry.textContent = vic + " victoires";
+            if(vic == 1) {
+                victory.textContent = vic + " victoire";
+            } else {
+                victory.textContent = vic + " victoires";
+            }
         }
     } else if(which == "paper") {
         playedP.textContent = "Vous avez joué : papier";
@@ -45,15 +57,27 @@ function play(which) {
         if(computer == "rock") {
             res.textContent = "Vous avez gagné !";
             vic++;
-            victortry.textContent = vic + " victoires";
+            if(vic == 1) {
+                victory.textContent = vic + " victoire";
+            } else {
+                victory.textContent = vic + " victoires";
+            }
         } else if(computer == "paper") {
             res.textContent = "Égalité !";
             tieCount++;
-            tie.textContent = tieCount + " égalités";
+            if(tieCount == 1) {
+                tie.textContent = tieCount + " égalité";
+            } else {
+                tie.textContent = tieCount + " égalités";
+            }
         } else if(computer == "scissors") {
             res.textContent = "Vous avez perdu !";
             def++;
-            defeat.textContent = def + " défaites";
+            if(def == 1) {
+                defeat.textContent = def + " défaite";
+            } else {
+                defeat.textContent = def + " défaites";
+            }
         }
     } else if(which == "scissors") {
         playedP.textContent = "Vous avez joué : ciseaux";
@@ -61,15 +85,27 @@ function play(which) {
         if(computer == "rock") {
             res.textContent = "Vous avez perdu !";
             def++;
-            defeat.textContent = def + " défaites";
+            if(def == 1) {
+                defeat.textContent = def + " défaite";
+            } else {
+                defeat.textContent = def + " défaites";
+            }
         } else if(computer == "paper") {
             res.textContent = "Vous avez gagné !";
             vic++;
-            victortry.textContent = vic + " victoires";
+            if(vic == 1) {
+                victory.textContent = vic + " victoire";
+            } else {
+                victory.textContent = vic + " victoires";
+            }
         } else if(computer == "scissors") {
             res.textContent = "Égalité !";
             tieCount++;
-            tie.textContent = tieCount + " égalités";
+            if(tieCount == 1) {
+                tie.textContent = tieCount + " égalité";
+            } else {
+                tie.textContent = tieCount + " égalités";
+            }
         }
     }
 }
@@ -81,9 +117,9 @@ function resetScore() {
 
     vic = 0; def = 0; tieCount = 0;
 
-    victortry.textContent = vic + " victoires";
-    defeat.textContent = def + " défaites";
-    tie.textContent = tieCount + " égalités";
+    victory.textContent = vic + " victoire";
+    defeat.textContent = def + " défaite";
+    tie.textContent = tieCount + " égalité";
 }
 
 function computerPlay() {
