@@ -1,0 +1,82 @@
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(102, 144, 190)  ;
+}
+
+header h1 {
+    color: rgb(21, 14, 92);
+    font-weight: bolder;
+    font-size: 3em;
+}
+
+#choice {
+    margin: 40px auto 0 auto;
+    padding: 24px 16px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    max-width: 500px;
+    flex-wrap: wrap;
+}
+
+#choice button {
+    flex: 1 1 120px;
+    min-width: 80px;
+    max-width: 180px;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 12px 0;
+    margin: 8px 0;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    border-color: white;
+    background: #232526 ;
+    color: #fff;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+#played {
+    margin: 32px auto;
+    font-size: 1.1em;
+    color: #fff;
+    /*background: #232526;*/
+    padding: 10px 0;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+#result {
+    margin: 24px auto;
+    font-size: 1em;
+    color: #fff;
+    background: #404142;
+    padding: 8px 0;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+#resetScore {
+    width: 180px;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 12px 0;
+    margin: 24px auto 0 auto;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    background: #353a40;
+    color: #fff;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+#resetScore:hover, #choice button:hover {
+    background: #fff;
+    border-color: #232526;
+    color: #232526;
+}
+
